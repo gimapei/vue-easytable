@@ -2,15 +2,15 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>loading 以及错误提示</h3>
+            <h3>loading</h3>
 
             <div class="mt30">
-               <anchor id="loading" label="开启loading" h4 ></anchor>
+               <anchor id="loading" label="loading" h4 ></anchor>
                <loading></loading>
            </div>
 
             <div class="mt30">
-                  <anchor id="custom-loading-and-error" label="自定义loading以及错误提示" h4 ></anchor>
+                  <anchor id="custom-loading-and-error" label="Loading" h4 ></anchor>
                   <custom-loading-and-error></custom-loading-and-error>
               </div>
         </div>

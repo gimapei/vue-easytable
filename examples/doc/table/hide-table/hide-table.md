@@ -1,4 +1,4 @@
-:::demo 当table需要显示隐藏切换时，需要使用table强制自适应，通过调用table组件的 `resize`方法;<br>**提示**：由于元素在隐藏时无法获取隐藏内元素的宽高，所有需要手动强制自适应。如果有更好的方式，这个方法后期将会遗弃！
+:::demo 테이블에 숨겨진 스위치를 보여줄 필요가있을 때 호출하여 적응 테이블, 테이블 어셈블리를 강제로 요구되는 `resize`방법 <br>힌트 : 요소가 숨겨진 요소의 너비와 높이를 숨길 수 없으므로 수동으로 모두 적용해야합니다. 더 좋은 방법이 있다면이 방법은 나중에 버려집니다!
 ```html
 <template>
    <div>
@@ -39,41 +39,41 @@
 
                 tables1: {
                     tableData: [
-                            {"name":"赵伟","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                            {"name":"李伟","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                            {"name":"孙伟","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                            {"name":"周伟","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                            {"name":"吴伟","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
+                        {"name":"홍길동","tel":"156*****1987","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                        {"name":"강남길","tel":"182*****1538","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                        {"name":"아이유","tel":"161*****0097","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                        {"name":"조커","tel":"197*****1123","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                        {"name":"변사또","tel":"183*****6678","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
                     ],
                     columns: [
-                        {field: 'name', title: '姓名1', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: true,formatter: function (rowData, index) {
-                            return '表格1111111111';
+                        {field: 'name', title: '이름1', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: true,formatter: function (rowData, index) {
+                            return '양식1111111111';
                         }},
-                        {field: 'tel', title: '手机号码1', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true,formatter: function (rowData, index) {
-                            return '表格1111111111';
+                        {field: 'tel', title: '전화번호1', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true,formatter: function (rowData, index) {
+                            return '양식1111111111';
                         }},
-                        {field: 'hobby', title: '爱好1', width: 190, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true},
-                        {field: 'address', title: '地址1', width: 200, titleAlign: 'center',columnAlign:'left', isFrozen: false,isResize:true},
+                        {field: 'hobby', title: '취미1', width: 190, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true},
+                        {field: 'address', title: '주소1', width: 200, titleAlign: 'center',columnAlign:'left', isFrozen: false,isResize:true},
                     ]
                 },
 
                 tables2: {
                     tableData: [
-                        {"name":"赵伟","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                        {"name":"李伟","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                        {"name":"孙伟","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                        {"name":"周伟","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                        {"name":"吴伟","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
+                        {"name":"홍길동","tel":"156*****1987","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                        {"name":"강남길","tel":"182*****1538","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                        {"name":"아이유","tel":"161*****0097","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                        {"name":"조커","tel":"197*****1123","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                        {"name":"변사또","tel":"183*****6678","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
                     ],
                     columns: [
-                        {field: 'name', title: '姓名2', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: true,formatter: function (rowData, index) {
-                            return '表格222222222';
+                        {field: 'name', title: '이름2', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: true,formatter: function (rowData, index) {
+                            return '양식222222222';
                         }},
-                        {field: 'tel', title: '手机号码2', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true,formatter: function (rowData, index) {
-                            return '表格222222222';
+                        {field: 'tel', title: '전화번호2', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true,formatter: function (rowData, index) {
+                            return '양식222222222';
                         }},
-                        {field: 'hobby', title: '爱好2', width: 190, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true},
-                        {field: 'address', title: '地址2', width: 200, titleAlign: 'center',columnAlign:'left', isFrozen: false,isResize:true},
+                        {field: 'hobby', title: '취미2', width: 190, titleAlign: 'center',columnAlign:'center', isFrozen: false,isResize:true},
+                        {field: 'address', title: '주소2', width: 200, titleAlign: 'center',columnAlign:'left', isFrozen: false,isResize:true},
                     ]
                 }
             }

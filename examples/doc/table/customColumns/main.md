@@ -2,10 +2,10 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>自适应</h3>
+            <h3>커스텀 컬럼</h3>
 
             <div class="mt30">
-               <anchor id="custom-columns" label="自定义列" h4 ></anchor>
+               <anchor id="custom-columns" label="커스텀 컬럼" h4 ></anchor>
                <custom-columns></custom-columns>
            </div>
         </div>

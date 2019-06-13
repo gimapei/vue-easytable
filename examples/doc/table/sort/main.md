@@ -2,15 +2,15 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>排序</h3>
+            <h3>정렬</h3>
 
             <div class="mt30">
-               <anchor id="single-columns-sort" label="单字段排序" h4 ></anchor>
+               <anchor id="single-columns-sort" label="단일필드 정렬" h4 ></anchor>
                <single-columns-sort></single-columns-sort>
            </div>
 
            <div class="mt30">
-              <anchor id="multiple-columns-sort" label="多字段排序" h4 ></anchor>
+              <anchor id="multiple-columns-sort" label="복합필드 정렬" h4 ></anchor>
               <multiple-columns-sort></multiple-columns-sort>
           </div>
         </div>

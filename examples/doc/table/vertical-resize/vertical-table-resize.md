@@ -1,4 +1,5 @@
-:::demo 自适应分为**纵向自适应**（高自适应） 和 **横向自适应**（宽自适应）。<br>如果是**横向自适应**需要满足下面条件：<br> - 通过 `is-horizontal-resize` 属性设置横向自适应；<br> - 通过 `isResize` 属性设置哪些列需要自适应（所有列都可以设置，达到所有列自适应）；<br> - 通过 `style="width:100%"` 设置显示比例（百分比的值根据需求而定）；<br> - 每个列必须提供宽度，这个宽度是自适应的最小宽度；<br>如果是**纵向自适应**只需要设置`is-vertical-resize=true`即可<br> - 可以通过`vertical-resize-offset`设置纵向偏移量调节距离当前可视高度底部的距离（比如包含分页时）
+:::demo 분할 적응 길이 적응 (높은 적응) 및 횡 적응 (넓음 적응).경우 측면 적응는 다음과 같은 조건을 만족해야합니다 저자 `is-horizontal-resize` 속성 횡 적응;함으로써 `isResize` 열 적응을 요구 특성 (모든 컬럼은 컬럼의 모든 적응을 달성하도록 설정 될 수있다);저자 `style="width:100%"` (필요에 따라 백분율 값) 표시를 설정하는 단계;각 열은 적응 형 최소 너비 인 너비를 제공해야합니다.경우 종 적응은 단지 정해야합니다 `is-vertical-resize=true`에 `vertical-resize-offset`수직 오프셋 (예 : 페이징이 포함 된 경우) 을 설정하여 현재 표시된 높이의 맨 아래로부터 거리를 조정할 수 있습니다.
+
 ```html
 <template>
     <v-table
@@ -20,37 +21,37 @@
         data() {
             return {
                 tableData: [
-                    {"name":"赵伟1","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                    {"name":"李伟1","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name":"孙伟1","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                    {"name":"周伟1","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                    {"name":"吴伟1","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"},
-                    {"name":"赵伟2","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                    {"name":"李伟2","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name":"孙伟2","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                    {"name":"周伟2","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                    {"name":"吴伟2","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"},
-                    {"name":"赵伟3","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                    {"name":"李伟3","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name":"孙伟3","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                    {"name":"周伟3","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                    {"name":"吴伟3","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"},
-                    {"name":"赵伟4","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                    {"name":"李伟4","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name":"孙伟4","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                    {"name":"周伟4","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                    {"name":"吴伟4","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"},
-                    {"name":"赵伟5","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                    {"name":"李伟5","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name":"孙伟5","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                    {"name":"周伟5","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                    {"name":"吴伟5","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
+                    {"name":"미남1","tel":"156*****1987","hobby":"수영","address":"경기도 동화리"},
+                    {"name":"미남1","tel":"182*****1538","hobby":"수영","address":"충남 당진군"},
+                    {"name":"미남1","tel":"161*****0097","hobby":"수영","address":"경남 사천군"},
+                    {"name":"미남1","tel":"197*****1123","hobby":"수영","address":"경기 이천시"},
+                    {"name":"미남1","tel":"183*****6678","hobby":"수영","address":"부산광역시 남포동"},
+                    {"name":"미남2","tel":"156*****1987","hobby":"수영","address":"경기도 동화리"},
+                    {"name":"미남2","tel":"182*****1538","hobby":"수영","address":"충남 당진군"},
+                    {"name":"미남2","tel":"161*****0097","hobby":"수영","address":"경남 사천군"},
+                    {"name":"미남2","tel":"197*****1123","hobby":"수영","address":"경기 이천시"},
+                    {"name":"미남2","tel":"183*****6678","hobby":"수영","address":"부산광역시 남포동"},
+                    {"name":"미남3","tel":"156*****1987","hobby":"수영","address":"경기도 동화리"},
+                    {"name":"미남3","tel":"182*****1538","hobby":"수영","address":"충남 당진군"},
+                    {"name":"미남3","tel":"161*****0097","hobby":"수영","address":"경남 사천군"},
+                    {"name":"미남3","tel":"197*****1123","hobby":"수영","address":"경기 이천시"},
+                    {"name":"미남3","tel":"183*****6678","hobby":"수영","address":"부산광역시 남포동"},
+                    {"name":"미남4","tel":"156*****1987","hobby":"수영","address":"경기도 동화리"},
+                    {"name":"미남4","tel":"182*****1538","hobby":"수영","address":"충남 당진군"},
+                    {"name":"미남4","tel":"161*****0097","hobby":"수영","address":"경남 사천군"},
+                    {"name":"미남4","tel":"197*****1123","hobby":"수영","address":"경기 이천시"},
+                    {"name":"미남4","tel":"183*****6678","hobby":"수영","address":"부산광역시 남포동"},
+                    {"name":"미남5","tel":"156*****1987","hobby":"수영","address":"경기도 동화리"},
+                    {"name":"미남5","tel":"182*****1538","hobby":"수영","address":"충남 당진군"},
+                    {"name":"미남5","tel":"161*****0097","hobby":"수영","address":"경남 사천군"},
+                    {"name":"미남5","tel":"197*****1123","hobby":"수영","address":"경기 이천시"},
+                    {"name":"미남5","tel":"183*****6678","hobby":"수영","address":"부산광역시 남포동"}
                  ],
                 columns: [
-                    {field: 'name', title: '姓名', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
-                    {field: 'tel', title: '手机号码', width: 150, titleAlign: 'center', columnAlign: 'center',isResize:true},
-                    {field: 'hobby', title: '爱好', width: 150, titleAlign: 'center', columnAlign: 'center',isResize:true},
-                    {field: 'address', title: '地址', width: 280, titleAlign: 'center', columnAlign: 'left',isResize:true}
+                    {field: 'name', title: '이름', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
+                    {field: 'tel', title: '전화번호', width: 150, titleAlign: 'center', columnAlign: 'center',isResize:true},
+                    {field: 'hobby', title: '취미', width: 150, titleAlign: 'center', columnAlign: 'center',isResize:true},
+                    {field: 'address', title: '주소', width: 280, titleAlign: 'center', columnAlign: 'left',isResize:true}
                 ]
             }
         }

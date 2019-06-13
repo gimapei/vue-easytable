@@ -1,4 +1,4 @@
-:::demo 通过传入 `cell-merge` 回调函数设置要合并的单元格<br> **使用技巧**：<br> - 找到要合并的列使用`colspan`，找到要合并的行使用`rowspan` <br> - 通过设置 `content`为合并后单元格内容（html），也可通过 `componentName` 将**组件**作为合并后单元格内容
+:::demo `cell-merge` 콜백함수를 통해 셀을 병합<br> **사용방법**：<br> - 병합하려는 열을 찾아서 `colspan`을 설정하여 열 병합, <br>병합하려는 행을 찾아서 `rowspan` 을 설정하여 행병합
 
 ```html
 <template>
@@ -23,31 +23,32 @@
         name: 'frozen-title-columns',
         data(){
             return {
-                tableData: [{"name":"赵伟","gender":"男","birthday":'1963-7-9',"height":"183","email":"zhao@gmail.com","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                            {"name":"李伟","gender":"男","birthday":'2003-12-7',"height":"166","email":"li@gmail.com","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                            {"name":"孙伟","gender":"女","birthday":'1993-12-7',"height":"186","email":"sun@gmail.com","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                            {"name":"周伟","gender":"女","birthday":'1993-12-7',"height":"188","email":"zhou@gmail.com","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                            {"name":"吴伟","gender":"男","birthday":'1993-12-7',"height":"160","email":"wu@gmail.com","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"},
-                            {"name":"冯伟","gender":"女","birthday":'1993-12-7',"height":"168","email":"feng@gmail.com","tel":"133*****3793","hobby":"钢琴、书法、唱歌","address":"上海市金山区龙胜路143号一层"},
-                            {"name":"褚伟","gender":"男","birthday":'1993-12-7',"height":"170","email":"zhu@gmail.com","tel":"189*****2345","hobby":"钢琴、书法、唱歌","address":"上海市闵行区都市路2988号2楼"},],
+                tableData: [
+                            {"name":"주성치","gender":"남","birthday":'1963-7-9',"height":"183","email":"zhao@gmail.com","tel":"156*****1987","hobby":"등산", "address":"경기도 화성시 기안동 19"},
+                            {"name":"이문열","gender":"남","birthday":'2003-12-7',"height":"166","email":"li@gmail.com","tel":"182*****1538","hobby":"등산",  "address":"경기도 화성시 기안동 19"},
+                            {"name":"군단세","gender":"여","birthday":'1993-12-7',"height":"186","email":"sun@gmail.com","tel":"161*****0097","hobby":"등산", "address":"경기도 화성시 기안동 19"},
+                            {"name":"조정치","gender":"여","birthday":'1993-12-7',"height":"188","email":"zhou@gmail.com","tel":"197*****1123","hobby":"등산","address":"경기도 화성시 기안동 19"},
+                            {"name":"아이유","gender":"남","birthday":'1993-12-7',"height":"160","email":"wu@gmail.com","tel":"183*****6678","hobby":"등산",  "address":"경기도 화성시 기안동 19"},
+                            {"name":"고릴라","gender":"여","birthday":'1993-12-7',"height":"168","email":"feng@gmail.com","tel":"133*****3793","hobby":"등산","address":"경기도 화성시 기안동 19"},
+                            {"name":"정우성","gender":"남","birthday":'1993-12-7',"height":"170","email":"zhu@gmail.com","tel":"189*****2345","hobby":"등산", "address":"경기도 화성시 기안동 19"}],
                 columns:[
-                       {field: 'name', title:'姓名', width: 150, titleAlign: 'center',columnAlign:'center', isFrozen: true},
-                       {field: 'gender', title:'性别', width: 150, titleAlign: 'center',columnAlign:'center', isFrozen: true},
-                       {field: 'tel', title: '手机号码', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: false},
-                       {field: 'birthday', title: '出生日期', width: 180, titleAlign: 'center',columnAlign:'center'},
-                       {field: 'hobby', title: '爱好', width: 380, titleAlign: 'center',columnAlign:'center'},
-                       {field: 'address', title: '地址', width: 430, titleAlign: 'center',columnAlign:'left'}
+                       {field: 'name', title:'이름', width: 150, titleAlign: 'center',columnAlign:'center', isFrozen: true},
+                       {field: 'gender', title:'성별', width: 150, titleAlign: 'center',columnAlign:'center', isFrozen: true},
+                       {field: 'tel', title: '전화번호', width: 180, titleAlign: 'center',columnAlign:'center', isFrozen: false},
+                       {field: 'birthday', title: '생일', width: 180, titleAlign: 'center',columnAlign:'center'},
+                       {field: 'hobby', title: '취미', width: 380, titleAlign: 'center',columnAlign:'center'},
+                       {field: 'address', title: '주소', width: 430, titleAlign: 'center',columnAlign:'left'}
                      ]
             }
         },
         methods: {
 
             cellMerge(rowIndex,rowData,field){
-                if (field === 'name' && rowData[field] === '李伟') {
+                if (rowIndex === 1 && field === 'name') {
                     return {
                         colSpan: 2,
                         rowSpan: 1,
-                        content: '<span style="color:red">单元格 colSpan</span>',
+                        content: '<span style="color:red">열 병합</span>',
                         componentName: ''
 
                     }
@@ -56,7 +57,7 @@
                     return {
                         colSpan: 1,
                         rowSpan: 3,
-                        content: '<span style="color:red">单元格 rowSpan</span>',
+                        content: '<span style="color:red">행 병합</span>',
                         componentName: ''
                     }
 
@@ -73,10 +74,10 @@
         }
     }
 
-        // 自定义列组件
+        // 사용자 정의 열 구성요소
         Vue.component('table-cell-merge',{
             template:`<span style="color:red">
-               单元格 rowSpan 和 colSpan 同时使用
+               열 / 행 동시 병합
             </span>`,
             props:{
                 rowData:{

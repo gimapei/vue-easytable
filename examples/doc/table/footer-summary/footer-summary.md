@@ -1,4 +1,4 @@
-:::demo 通过设置 `footer` 数组对象给 table 添加汇总信息，footer **汇总信息可以设置多行**，每一个子数组代表一行汇总信息 <br> 通过 `footer-cell-class-name` 属性设置footer 各个单元格的样式 <br> 通过 `footer-row-height`属性设置每个footer行高（默认40px） <br> **注意**：由于汇总信息格式不定，有**求和、平均值、最大值、最小值、乘积**等等，以及保留位数不定等问题。所以**汇总信息由调用者提供**！
+:::demo 제공 `footer`정보 요약 테이블을 추가 오브젝트의 배열을, 꼬리말 요약 정보는 복수의 행이 제공 될 수있다 , <br>각 서브 어레이는 하나의 라인의 개요를 나타내는 으로 `footer-cell-class-name`각 셀 패턴의 속성 바닥 글으로 `footer-row-height`각각의 바닥 글 행 높이의 특성 (기본 40px) 참고 : 요약 정보 형식의 불확실성으로 인해 요약, 평균, 최대, 최소, 제품 등이 있으며 예약 된 자릿수는 고정되어 있지 않습니다. 따라서 요약 정보는 발신자가 제공합니다 !
 ```html
 <template>
     <div>
@@ -34,23 +34,23 @@
         data() {
             return {
                 tableData: [
-                    {"name": "赵伟", "amount1": "2", "amount2": "3", "amount3": "上海市黄浦区金陵东路569号17楼"},
-                    {"name": "李伟", "amount1": "5", "amount2": "4", "amount3": "上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name": "孙伟", "amount1": "3", "amount2": "9", "amount3": "上海市崇明县城桥镇八一路739号"},
-                    {"name": "周伟", "amount1": "6", "amount2": "10", "amount3": "上海市青浦区青浦镇章浜路24号"},
-                    {"name": "吴伟", "amount1": "1", "amount2": "12", "amount3": "上海市松江区乐都西路867-871号"}
+                    {"name": "홍길동", "amount1": "2", "amount2": "3", "amount3":  "15"},
+                    {"name": "주성치", "amount1": "5", "amount2": "4", "amount3":  "15"},
+                    {"name": "아이유", "amount1": "3", "amount2": "9", "amount3":  "15"},
+                    {"name": "주윤발", "amount1": "6", "amount2": "10", "amount3": "15"},
+                    {"name": "성시경", "amount1": "1", "amount2": "12", "amount3": "15"}
                 ],
                 columns: [
-                    {field: 'name',title: '姓名',width: 100,titleAlign: 'center',columnAlign: 'center',isFrozen: true},
-                    {field: 'amount1',title: '数值1',width: 200,titleAlign: 'center',columnAlign: 'center',isResize: true},
-                    {field: 'amount2',title: '数值2',width: 230,titleAlign: 'center',columnAlign: 'center',isResize: true},
-                    {field: 'amount3',title: '数值3',width: 208,titleAlign: 'center',columnAlign: 'left',isResize: true}
+                    {field: 'name',title: '이름',width: 100,titleAlign: 'center',columnAlign: 'center',isFrozen: true},
+                    {field: 'amount1',title: '값1',width: 200,titleAlign: 'center',columnAlign: 'center',isResize: true},
+                    {field: 'amount2',title: '값2',width: 230,titleAlign: 'center',columnAlign: 'center',isResize: true},
+                    {field: 'amount3',title: '값3',width: 208,titleAlign: 'center',columnAlign: 'left',isResize: true}
                 ],
                 footer: []
-                /* 下面的数据结构
+                /* footer 데이타 구조
                  footer: [
-                    ['最小值',1,3,'-'],
-                    ['求和',17,38,'-']
+                    ['최소값',1,3,'-'],
+                    ['합계',17,38,'-']
                  ]
                 */
             }
@@ -68,13 +68,13 @@
                         return item.amount2
                     });
 
-                let minVal = ['最小值'];
+                let minVal = ['최소값'];
                 minVal.push(Math.min.apply(null, amounts1)+' ￥');
                 minVal.push(Math.min.apply(null, amounts2)+' ￥');
                 minVal.push('-');
 
 
-                let sumVal = ['求和'];
+                let sumVal = ['합계'];
                 sumVal.push(
                     amounts1.reduce((prev, curr) => {
 
@@ -98,7 +98,7 @@
                 this.footer = result;
             },
 
-            // 设置 footer-cell-class
+            // footer-cell-class 설정
             setFooterCellClass(rowIndex, colIndex, value){
 
                 if (colIndex === 0) {

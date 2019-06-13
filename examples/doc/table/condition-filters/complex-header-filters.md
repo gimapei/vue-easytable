@@ -1,4 +1,4 @@
-:::demo 复杂表头表格使用筛选功能和简单表头表格使用方式类似，区别是 `filters` 以及 `filterMultiple`配置 是通过 `titleRows` 设置，详情见demo
+:::demo 복소 필터 결과에 나타난 헤더 것을 제외 간단한 헤더 유사한 방법을 사용하여 테이블 `filters`뿐만 아니라 `filterMultiple`하여 구성 `titleRows`상세한 데모로서 설정
  ```html
 
 <template>
@@ -22,38 +22,38 @@
             return {
                 tableData: [],
                 columns: [
-                    {field: 'name', title: '姓名', width: 80, columnAlign:'center',isResize:true},
-                    {field: 'gender', title: '手机号码', width: 50,columnAlign:'center',isResize:true},
-                    {field: 'hobby', title: '爱好', width: 150,columnAlign:'center',isResize:true},
-                    {field: 'address', title: '地址',width: 280,isResize:true}
+                    {field: 'name', title: '이름', width: 80, columnAlign:'center',isResize:true},
+                    {field: 'gender', title: '성별', width: 50,columnAlign:'center',isResize:true},
+                    {field: 'hobby', title: '취미', width: 150,columnAlign:'center',isResize:true},
+                    {field: 'address', title: '주소',width: 280,isResize:true}
                 ],
                 titleRows:[
                     [
-                        {fields:["name","gender"],title:"基础信息", titleAlign: 'center', colspan: 2},
-                        {fields: ['hobby'], title: '爱好', titleAlign: 'center',rowspan: 2},
-                        {fields: ['address'], title: '地址', titleAlign: 'center',rowspan: 2}
+                        {fields:["name","gender"],title:"기본정보", titleAlign: 'center', colspan: 2},
+                        {fields: ['hobby'], title: '취미', titleAlign: 'center',rowspan: 2},
+                        {fields: ['address'], title: '주소', titleAlign: 'center',rowspan: 2}
                     ],
                     [
-                        {fields: ['name'], title: '姓名', titleAlign: 'center',
+                        {fields: ['name'], title: '이름', titleAlign: 'center',
                             filterMultiple: true,
                             filters: [{
-                                label: '孙伟',
-                                value: '孙伟',
+                                label: '홍길동',
+                                value: '홍길동',
                             }, {
-                                label: '吴伟',
-                                value: '吴伟',
+                                label: '아이유',
+                                value: '아이유',
                             }, {
-                                label: '周伟',
-                                value: '周伟',
+                                label: '조커',
+                                value: '조커',
                             }]},
-                        {fields: ['gender'], title: '性别', titleAlign: 'center',
+                        {fields: ['gender'], title: '성별', titleAlign: 'center',
                             filterMultiple: false,
                             filters: [{
-                                label: '男',
-                                value: '男',
+                                label: '남',
+                                value: '남',
                             }, {
-                                label: '女',
-                                value: '女',
+                                label: '여',
+                                value: '여',
                             }]}
                     ]
                 ]
@@ -84,11 +84,11 @@
             getTableData(){
 
                 return [
-                    {"name":"赵伟","gender":"女","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                    {"name":"李伟","gender":"女","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name":"孙伟","gender":"男","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                    {"name":"周伟","gender":"女","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                    {"name":"吴伟","gender":"男","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
+                    {"name":"홍길동","gender":"남","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                    {"name":"강남길","gender":"남","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                    {"name":"아이유","gender":"여","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                    {"name":"조커",  "gender":"여","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                    {"name":"변사또","gender":"남","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
                 ]
             }
         },

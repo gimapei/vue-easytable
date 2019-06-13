@@ -2,10 +2,10 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>表格纵向自适应</h3>
+            <h3>세로방향 테이블 사이즈 조정</h3>
 
             <div class="mt30">
-                <anchor id="vertical-table-resize" label="表格纵向自适应" h4 ></anchor>
+                <anchor id="vertical-table-resize" label="세로방향 테이블 사이즈 조정" h4 ></anchor>
                 <vertical-table-resize></vertical-table-resize>
             </div>
         </div>

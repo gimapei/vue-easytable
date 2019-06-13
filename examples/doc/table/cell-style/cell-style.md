@@ -1,5 +1,6 @@
 
 :::demo 설정 헤더 셀 스타일을 위하여 `titleCellClassName`클래스 속성에 셀 헤더를 설정하는 단계; 설정 열 스타일에서 셀을 다음 `columnCellClassName` 열 셀 클래스를 설정하는 방법;
+
 ```html
 <template>
     <v-table

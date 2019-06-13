@@ -2,10 +2,10 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>表格行/列合并</h3>
+            <h3>행 / 열 통합</h3>
 
             <div class="mt30">
-               <anchor id="cell-merge" label="行、列合并" h4 ></anchor>
+               <anchor id="cell-merge" label="행 / 열 통합" h4 ></anchor>
                <cell-merge></cell-merge>
            </div>
         </div>
