@@ -1,4 +1,4 @@
-:::demo 设置表格总宽度，最后一列不设置，那么自动一列宽度将会自动计算
+:::demo 표의 전체 너비를 설정하고 마지막 열을 설정하지 않으면 자동 열 너비가 자동으로 계산됩니다.
 
 ```html
 <template>
@@ -15,18 +15,18 @@
     export default{
         data() {
             return {
-                 tableData: [
-                     {"name":"赵伟","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                     {"name":"李伟","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                     {"name":"孙伟","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                     {"name":"周伟","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                     {"name":"吴伟","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
-                 ],
+                tableData: [
+                    {"name":"홍길동","tel":"156*****1987","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                    {"name":"강남길","tel":"182*****1538","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                    {"name":"아이유","tel":"161*****0097","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                    {"name":"조커","tel":"197*****1123","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                    {"name":"변사또","tel":"183*****6678","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
+                ],
                 columns: [
-                    {field: 'name', title:'姓名', width: 100, titleAlign: 'center',columnAlign:'center'},
-                    {field: 'tel', title: '手机号码', width: 260, titleAlign: 'center',columnAlign:'center'},
-                    {field: 'hobby', title: '爱好', width: 330, titleAlign: 'center',columnAlign:'center'},
-                    {field: 'address', title: '地址', titleAlign: 'center',columnAlign:'left'}
+                    {field: 'name', title:'이름', width: 150, titleAlign: 'center',columnAlign:'center', isFrozen: true},
+                    {field: 'tel', title: '전화번호', width: 280, titleAlign: 'center',columnAlign:'center', isFrozen: true},
+                    {field: 'hobby', title: '취미', width: 380, titleAlign: 'center',columnAlign:'center'},
+                    {field: 'address', title: '주소',  titleAlign: 'center',columnAlign:'left'}
                 ]
             }
         }

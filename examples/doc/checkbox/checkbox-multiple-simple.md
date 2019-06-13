@@ -1,29 +1,29 @@
 
 
-:::demo 多选功能
+:::demo 다중 선택功能
 
 ```html
 <template>
    <div>
           <div class="mt30">
-               <div class="bold">多选</div>
+               <div class="bold">다중 선택</div>
                <v-checkbox-group v-model="checkboxGroupDefaultValue1">
-                   <v-checkbox label="南瓜"></v-checkbox>
-                   <v-checkbox disabled label="西红柿"></v-checkbox>
-                   <v-checkbox label="哈密瓜"></v-checkbox>
-                   <v-checkbox label="水蜜桃"></v-checkbox>
+                   <v-checkbox label="호박"></v-checkbox>
+                   <v-checkbox disabled label="토마토"></v-checkbox>
+                   <v-checkbox label="멜론"></v-checkbox>
+                   <v-checkbox label="복숭아"></v-checkbox>
                </v-checkbox-group>
                [{{checkboxGroupDefaultValue1.join()}}]
             </div>
             <div class="mt30">
-                   <div class="bold">全选</div>
+                   <div class="bold">전체 선택</div>
 
                    <div>
                         <v-checkbox
                             @change="handleCheckAll"
                              :indeterminate="indeterminate"
                              v-model = "checkedAllModel"
-                             label="全选"
+                             label="전체 선택"
 
                             ></v-checkbox>
                         <br/><br/>
@@ -42,16 +42,16 @@
 export default{
     data(){
         return {
-               checkboxGroupDefaultValue1:['西红柿','哈密瓜'],
+               checkboxGroupDefaultValue1:['토마토','멜론'],
 
                checkboxGroupInitValues:[
-                    {disabled:false,label:'南瓜'},
-                    {disabled:false,label:'西红柿'},
-                    {disabled:false,label:'哈密瓜'},
-                    {disabled:false,label:'水蜜桃'},
+                    {disabled:false,label:'호박'},
+                    {disabled:false,label:'토마토'},
+                    {disabled:false,label:'멜론'},
+                    {disabled:false,label:'복숭아'},
                ],
 
-               checkboxGroupDefaultValue2:['南瓜','哈密瓜','水蜜桃'],
+               checkboxGroupDefaultValue2:['호박','멜론','복숭아'],
 
                indeterminate:true,
                checkedAllModel:false
@@ -80,7 +80,7 @@ export default{
 
     methods:{
 
-        // 全选
+        // 전체 선택
         checkAll(){
             let all = this.checkboxGroupInitValues.map(item=>{
 

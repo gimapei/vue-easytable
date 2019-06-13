@@ -1,26 +1,26 @@
 
-## 安装
+## 설치
 
-### CDN 方式使用
+### CDN 방식
 
-通过 [https://unpkg.com/vue-easytable/](https://unpkg.com/vue-easytable/) 可以看到 vue-easytable 最新版本的资源，也可以切换版本选择需要的资源，在页面上引入 js 和 css 文件即可开始使用：
+[https://unpkg.com/vue-easytable/](https://unpkg.com/vue-easytable/) 
 
 ```css
-<!-- 引入样式 -->
+<!-- 스타일 -->
 <link rel="stylesheet" href="https://unpkg.com/vue-easytable/umd/css/index.css">
-<!-- 引入Vue -->
+<!-- Vue -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<!-- 引入组件库 -->
+<!-- 컴포넌트 -->
 <script src="https://unpkg.com/vue-easytable/umd/js/index.js"></script>
 ```
 
-### 示例
+### 예제
 ``` html
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- 引入样式 -->
+    <!-- 스타일 -->
     <link rel="stylesheet" href="https://unpkg.com/vue-easytable/umd/css/index.css">
 </head>
 <body>
@@ -33,9 +33,9 @@
     ></v-table>
 </div>
 </body>
-<!-- 先引入 Vue -->
+<!-- Vue -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<!-- 引入组件库 -->
+<!-- 컴포넌트 -->
 <script src="https://unpkg.com/vue-easytable/umd/js/index.js"></script>
 <script>
     new Vue({
@@ -43,17 +43,17 @@
         data: function() {
             return {
                 tableData: [
-                    {"name":"赵伟","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                    {"name":"李伟","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                    {"name":"孙伟","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                    {"name":"周伟","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                    {"name":"吴伟","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
+                    {"name":"홍길동","tel":"156*****1987","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                    {"name":"강남길","tel":"182*****1538","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                    {"name":"아이유","tel":"161*****0097","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                    {"name":"조커","tel":"197*****1123","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                    {"name":"변사또","tel":"183*****6678","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
                 ],
                 columns: [
-                    {field: 'name', title:'姓名', width: 100, titleAlign: 'center',columnAlign:'center'},
-                    {field: 'tel', title: '手机号码', width: 260, titleAlign: 'center',columnAlign:'center'},
-                    {field: 'hobby', title: '爱好', width: 330, titleAlign: 'center',columnAlign:'center'},
-                    {field: 'address', title: '地址', titleAlign: 'center',columnAlign:'left'}
+                    {field: 'name', title:'이름', width: 150, titleAlign: 'center',columnAlign:'center', isFrozen: true},
+                    {field: 'tel', title: '전화번호', width: 280, titleAlign: 'center',columnAlign:'center', isFrozen: true},
+                    {field: 'hobby', title: '취미', width: 380, titleAlign: 'center',columnAlign:'center'},
+                    {field: 'address', title: '주소', width: 430, titleAlign: 'center',columnAlign:'left'}
                 ]
             }
         }
@@ -62,21 +62,19 @@
 </html>
 ```
 
-### NPM 方式使用
+### NPM 방식
 
 ```javascript
 npm install vue-easytable --save-dev
 ```
 
-### 使用
-
 ```javascript
-// 引入样式
+// 스타일
 import 'vue-easytable/libs/themes-base/index.css'
-// 导入 table 和 分页组件
+// 컴포넌트
 import {VTable,VPagination} from 'vue-easytable'
 
-// 注册到全局
+// vue에  등록
 Vue.component(VTable.name, VTable)
 Vue.component(VPagination.name, VPagination)
 ```

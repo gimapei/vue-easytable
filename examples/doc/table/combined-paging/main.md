@@ -2,10 +2,10 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>表格结合分页</h3>
+            <h3>페이징 넣기</h3>
 
             <div class="mt30">
-                <anchor id="combined-paging" label="表格结合分页" h4 ></anchor>
+                <anchor id="combined-paging" label="페이징 넣기" h4 ></anchor>
                 <combined-paging></combined-paging>
             </div>
         </div>

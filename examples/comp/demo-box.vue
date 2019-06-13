@@ -16,10 +16,10 @@
         <!--代码展示-->
         <div class="example-codeHighlight" v-show="showDemo">
             <div class="example-codeHighlight-tools" v-if="showCode">
-                <i @click.stop="openJSFiddle()" title="在 JSFiddle 中打开"
+                <i @click.stop="openJSFiddle()" title="JSFiddle로 열기"
                    class="example-codeHighlight-tools-i iconfont icon-bug"></i>
                 <span>
-                    <i v-show="!copyDone" @click="copyCode" title="复制代码"
+                    <i v-show="!copyDone" @click="copyCode" title="코드복사"
                        class="copy-code example-codeHighlight-tools-i iconfont icon-fuzhi1"></i>
 
                     <i v-show="copyDone" class="copy-code-done iconfont icon-chenggong"
@@ -30,7 +30,7 @@
             <slot name="codeHighlight" v-if="showCode"></slot>
             <div class="example-codeHighlight-showCode" @click="showCodeToggle()">
                 <i :class="[showCode?'v-icon-up-dir':'v-icon-down-dir']"></i>
-                <span>{{showCode ? '收起代码' : '显示代码'}}</span>
+                <span>{{showCode ? '코드접기' : '코드보기'}}</span>
             </div>
 
         </div>

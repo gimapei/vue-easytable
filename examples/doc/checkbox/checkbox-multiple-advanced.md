@@ -1,19 +1,19 @@
 
 
-:::demo 禁用情况下的全选
+:::demo 禁用情况下的전체선택
 
 ```html
 <template>
    <div>
             <div class="mt30">
-                   <div class="bold">全选</div>
+                   <div class="bold">전체선택</div>
 
                    <div>
                         <v-checkbox
                             @change="handleCheckAll"
                              :indeterminate="indeterminate"
                              v-model = "checkedAllModel"
-                             label="全选"
+                             label="전체선택"
 
                             ></v-checkbox>
                         <br/><br/>
@@ -34,15 +34,15 @@ export default{
         return {
 
                checkboxGroupInitValues:[
-                    {disabled:false,label:'南瓜'},
-                    {disabled:false,label:'西红柿'},
-                    {disabled:false,label:'哈密瓜'},
-                    {disabled:false,label:'水蜜桃'},
-                    {disabled:true,label:'哈密瓜2'},
-                    {disabled:false,label:'水蜜桃2'},
+                    {disabled:false,label:'호박'},
+                    {disabled:false,label:'토마토'},
+                    {disabled:false,label:'멜론'},
+                    {disabled:false,label:'복숭아'},
+                    {disabled:true,label:'멜론2'},
+                    {disabled:false,label:'복숭아2'},
                ],
 
-               checkboxGroupDefaultValue:['南瓜','哈密瓜','水蜜桃','哈密瓜2'],
+               checkboxGroupDefaultValue:['호박','멜론','복숭아','멜론2'],
 
                indeterminate:true,
                checkedAllModel:false
@@ -99,7 +99,7 @@ export default{
 
     methods:{
 
-        // 全选
+        // 전체선택
         checkAll(){
 
             let all = this.checkboxGroupInitValues.map(item=>{

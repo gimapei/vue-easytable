@@ -2,10 +2,10 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>单元格编辑</h3>
+            <h3>셀 편집</h3>
 
             <div class="mt30">
-               <anchor id="cell-edit" label="单元格编辑" h4 ></anchor>
+               <anchor id="cell-edit" label="셀 편집" h4 ></anchor>
                <cell-edit></cell-edit>
            </div>
         </div>

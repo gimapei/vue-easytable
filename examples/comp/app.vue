@@ -8,7 +8,7 @@
                     <a class="main-banner-title-item" href="https://github.com/huangshuwei/vue-easytable">
                         <i class="icon iconfont icon-github"></i>&nbsp;&nbsp;github</a>
                     <a class="main-banner-title-item" href="https://github.com/huangshuwei/vue-easytable/releases">
-                        <i class="icon iconfont icon-gengxinrizhi"></i>&nbsp;&nbsp;更新日志</a>
+                        <i class="icon iconfont icon-gengxinrizhi"></i>&nbsp;&nbsp;최종수정일</a>
                 </span>
             </div>
         </div>
@@ -18,92 +18,92 @@
             <div class="main-wrapper-sidebar">
                 <ul class="menu-root">
                     <li>
-                        <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">开始</a>
+                        <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">시작일</a>
                         <ul class="menu-sub">
                             <li>
-                                <router-link to="/intro">介绍</router-link>
+                                <router-link to="/intro">소개</router-link>
                             </li>
                             <li>
-                                <router-link to="/install">安装</router-link>
+                                <router-link to="/install">설치</router-link>
                             </li>
                             <li>
-                                <router-link to="/start">快速上手</router-link>
+                                <router-link to="/start">빠른시작</router-link>
                             </li>
                         </ul>
 
-                        <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">table 组件</a>
+                        <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">table 컴포넌트</a>
                         <ul class="menu-sub">
                             <li>
-                                <router-link to="/table/basic">基本用法</router-link>
+                                <router-link to="/table/basic">기본 사용</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/horizontalResize">表格横向自适应</router-link>
+                                <router-link to="/table/horizontalResize">가로크기 재조정</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/verticalResize">表格纵向自适应</router-link>
+                                <router-link to="/table/verticalResize">세로크기 재조정</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/customColumns">自定义列</router-link>
+                                <router-link to="/table/customColumns">커스텀 컬럼</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/cellStyle">单元格样式</router-link>
+                                <router-link to="/table/cellStyle">셀 스타일</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/columnWidthDrag">列宽拖动</router-link>
+                                <router-link to="/table/columnWidthDrag">컬럼 크기 드래그</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/selection">多选功能</router-link>
+                                <router-link to="/table/selection">멀티 선택</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/cellEdit">单元格编辑</router-link>
+                                <router-link to="/table/cellEdit">셀 수정</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/cellMerge">行、列合并</router-link>
+                                <router-link to="/table/cellMerge">셀 통합</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/conditionFilters">条件筛选</router-link>
+                                <router-link to="/table/conditionFilters">필터</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/footerSummary">footer 汇总</router-link>
+                                <router-link to="/table/footerSummary">footer 종합</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/loading">loading 以及错误提示</router-link>
+                                <router-link to="/table/loading">loading</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/sort">排序</router-link>
+                                <router-link to="/table/sort">정렬</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/fixedColumnsTitle">固定表头固定列</router-link>
+                                <router-link to="/table/fixedColumnsTitle">고정 컬럼</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/hideTable">隐藏表格</router-link>
+                                <router-link to="/table/hideTable">숨김 테이블</router-link>
                             </li>
                             <li>
-                                <router-link to="/table/combinedPaging">表格结合分页</router-link>
+                                <router-link to="/table/combinedPaging">페이징 넣기</router-link>
                             </li>
                             <li>
                                 <router-link to="/table/api">API</router-link>
                             </li>
                         </ul>
 
-                        <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">分页组件</a>
+                        <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">페이징 컴포넌트</a>
                         <ul class="menu-sub">
                             <li>
-                                <router-link to="/pagination">pagination 分页</router-link>
+                                <router-link to="/pagination">페이징</router-link>
                             </li>
                         </ul>
 
                         <template v-if="showHide">
-                            <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">内置组件</a>
+                            <a class="main-wrapper-sidebar-link" href="javascript:javascript:void(0);">기본탑재 컴포넌트</a>
                             <ul class="menu-sub">
                                 <li>
-                                    <router-link to="/select">Select 选择</router-link>
+                                    <router-link to="/select">Select</router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/checkbox">Checkbox 多选</router-link>
+                                    <router-link to="/checkbox">Checkbox</router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/dropdown">Dropdown 下拉</router-link>
+                                    <router-link to="/dropdown">Dropdown</router-link>
                                 </li>
                             </ul>
                         </template>

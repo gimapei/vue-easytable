@@ -1,9 +1,11 @@
 
-## 介绍
-基于 vue2.x 的 table 组件支持单元格合并、单元格编辑、多表头固定、多列固定、列拖动、排序、自定义列、分页、单元格编辑、多选、条件过滤、footer 汇总等功能
+## 소개
+for Vue 2.0
+Powerful and flexible support for cell merging, cell editing, multi-header pinning, multi-column pinning, column dragging, sorting, custom columning, paging, cell editing, full selection, row expansion, conditional filtering, footer summary, Export excel
 
 
-### 效果展示（只是部分功能）
+
+### 성능표시 ( 일부 기능만 )
 ![vue-easytable](../images/vue-easytable.gif)
 
 

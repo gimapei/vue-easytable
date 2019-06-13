@@ -1,5 +1,5 @@
 
-:::demo 通过给 `columns` 设置 `isEdit:true` 开启单元格编辑。<br> **回调事件**： <br> - `cell-edit-done`回调函数，回调参数为 `newValue`、`oldValue`、`rowIndex`、`rowData`、`field`，并给`table-data`当前编辑的列赋值 <br> **提示**：由于直接通过操作DOM 会破坏响应式，通过在`cell-edit-done`回调函数中给 `table-data`编辑的列赋值，达到响应式的目的
+:::demo `columns`의 `isEdit:true`로설정해서 셀편집기능을 사용하도록 합니다. 。<br> **콜백 이벤트**： <br> - `cell-edit-done`의 콜백함수를 작성하세요 `newValue`、`oldValue`、`rowIndex`、`rowData`、`field`의 매개변수가 필요합니다. `table-data`배열에서 현재 편집된 Row를 지정하세요.  <br> **프롬프트**：DOM 응답성능에 직접적으로 영향을 주기때문에 `cell-edit-done` 콜백함수에서 성능을 감안하세요.  `table-data`编辑的列赋值，达到响应式的目的
 
 ```html
 <template>
@@ -26,33 +26,32 @@
     export default{
         data() {
             return {
-                  tableData: [
-                        {"name":"赵伟","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                        {"name":"李伟","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                        {"name":"孙伟","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                        {"name":"周伟","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                        {"name":"吴伟","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
-                     ],
+                tableData: [
+                    {"name":"홍길동","tel":"156*****1987","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                    {"name":"강남길","tel":"182*****1538","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                    {"name":"아이유","tel":"161*****0097","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                    {"name":"조커","tel":"197*****1123","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                    {"name":"변사또","tel":"183*****6678","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
+                ],
                     columns:  [
-                             {field: 'name', title:'姓名', width: 80, titleAlign: 'center',columnAlign:'center',isEdit:true,
+                             {field: 'name', title:'이름', width: 80, titleAlign: 'center',columnAlign:'center',isEdit:true,
                               formatter: function (rowData,rowIndex,pagingIndex,field) {
 
                                    return `<span class='cell-edit-color'>${rowData[field]}</span>`;
                                },isResize:true},
-                             {field: 'tel', title: '手机号码', width: 150, titleAlign: 'center',columnAlign:'center',isEdit:true,isResize:true},
-                             {field: 'hobby', title: '爱好', width: 150, titleAlign: 'center',columnAlign:'center',isEdit:true,isResize:true},
-                             {field: 'address', title: '地址', width: 280, titleAlign: 'center',columnAlign:'left',isEdit:true,isResize:true}
+                             {field: 'tel', title: '전화번호', width: 150, titleAlign: 'center',columnAlign:'center',isEdit:true,isResize:true},
+                             {field: 'hobby', title: '취미', width: 150, titleAlign: 'center',columnAlign:'center',isEdit:true,isResize:true},
+                             {field: 'address', title: '주소', width: 280, titleAlign: 'center',columnAlign:'left',isEdit:true,isResize:true}
                      ]
             }
         },
         methods:{
 
-            // 单元格编辑回调
             cellEditDone(newValue,oldValue,rowIndex,rowData,field){
 
                 this.tableData[rowIndex][field] = newValue;
 
-                // 接下来处理你的业务逻辑，数据持久化等...
+                // 비즈니스 로직, 테이트 처리 등을 작성하세요. 
             }
         }
     }

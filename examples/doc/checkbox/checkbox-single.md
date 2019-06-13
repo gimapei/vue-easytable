@@ -4,18 +4,18 @@
 <template>
 <div>
      <div class="mt30">
-           <div class="bold">单选</div>
-           <v-checkbox  v-model="checkboxValue1">哈密瓜</v-checkbox>
+           <div class="bold">체크박스</div>
+           <v-checkbox  v-model="checkboxValue1">멜론</v-checkbox>
            <div>{{checkboxValue1}}</div>
      </div>
 
      <div class="mt30">
              <div class="bold">
-             单选禁用</div>
-            <v-checkbox disabled v-model="checkboxValue2">哈密瓜</v-checkbox>
+             체크박스 사용중지</div>
+            <v-checkbox disabled v-model="checkboxValue2">멜론</v-checkbox>
             <div>{{checkboxValue2}}</div>
 
-             <v-checkbox disabled v-model="checkboxValue3">哈密瓜</v-checkbox>
+             <v-checkbox disabled v-model="checkboxValue3">멜론</v-checkbox>
              <div>{{checkboxValue3}}</div>
      </div>
 </div>

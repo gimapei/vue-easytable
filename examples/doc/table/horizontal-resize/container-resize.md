@@ -1,4 +1,4 @@
-:::demo 有时同一行可能要放**多个自适应的表格**，只需要给每个表格的容器设置显示比例即可
+:::demo 때로는 동일한 행 에 둘 이상의 **적응 형 테이블**을 넣을 수도 있습니다 . 각 테이블의 컨테이너에 대한 표시 크기를 설정하기 만하면됩니다.
 ```html
 <template>
     <div>
@@ -33,17 +33,18 @@
         data() {
             return {
                 tableData: [
-                        {"name":"赵伟","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                        {"name":"李伟","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                        {"name":"孙伟","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                        {"name":"周伟","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                        {"name":"吴伟","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
-                    ],
+                    {"name":"홍길동","tel":"156*****1987","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                    {"name":"강남길","tel":"182*****1538","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                    {"name":"아이유","tel":"161*****0097","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                    {"name":"조커","tel":"197*****1123","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                    {"name":"변사또","tel":"183*****6678","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
+                ],
+            
                 columns: [
-                        {field: 'name', title: '姓名', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
-                        {field: 'tel', title: '手机号码', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
-                        {field: 'hobby', title: '爱好', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
-                        {field: 'address', title: '地址', width: 160, titleAlign: 'center', columnAlign: 'center',isResize:true},
+                        {field: 'name', title: '이름', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
+                        {field: 'tel', title: '전화번호', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
+                        {field: 'hobby', title: '취미', width: 80, titleAlign: 'center', columnAlign: 'center',isResize:true},
+                        {field: 'address', title: '주소', width: 160, titleAlign: 'center', columnAlign: 'center',isResize:true},
                 ]
             }
         }

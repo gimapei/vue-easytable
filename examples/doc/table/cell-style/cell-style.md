@@ -1,6 +1,5 @@
 
-:::demo 设置**表头单元格样式**：通过`titleCellClassName`属性给表头的单元格设置class；<br>设置**列单元格样式**：通过`columnCellClassName`方法给列的单元格设置class；
-
+:::demo 설정 헤더 셀 스타일을 위하여 `titleCellClassName`클래스 속성에 셀 헤더를 설정하는 단계; 설정 열 스타일에서 셀을 다음 `columnCellClassName` 열 셀 클래스를 설정하는 방법;
 ```html
 <template>
     <v-table
@@ -40,18 +39,18 @@
     export default{
         data() {
             return {
-                   tableData: [
-                       {"name":"赵伟","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
-                       {"name":"李伟","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                       {"name":"孙伟","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                       {"name":"周伟","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
-                       {"name":"吴伟","tel":"183*****6678","hobby":"钢琴、书法、唱歌","address":"上海市松江区乐都西路867-871号"}
-                    ],
+                tableData: [
+                    {"name":"홍길동","tel":"156*****1987","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 110동"},
+                    {"name":"강남길","tel":"182*****1538","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 101동"},
+                    {"name":"아이유","tel":"161*****0097","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 106동"},
+                    {"name":"조커","tel":"197*****1123","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 207동"},
+                    {"name":"변사또","tel":"183*****6678","hobby":"서예, 수묵화","address":"경기도 화성기 기안동 신일해피트리 307동"}
+                ],
                    columns: [
-                      {field: 'name', title:'姓名', width: 80, titleAlign: 'center',columnAlign:'center',isResize:true},
-                      {field: 'tel', title: '手机号码', width: 150, titleAlign: 'center',columnAlign:'center',isResize:true},
-                      {field: 'hobby', title: '爱好', width: 150, titleAlign: 'center',columnAlign:'center',titleCellClassName:'title-cell-class-name-test',isResize:true},
-                      {field: 'address', title: '地址', width: 280, titleAlign: 'center',columnAlign:'left',isResize:true}
+                      {field: 'name', title:'이름', width: 80, titleAlign: 'center',columnAlign:'center',isResize:true},
+                      {field: 'tel', title: '전화번호', width: 150, titleAlign: 'center',columnAlign:'center',isResize:true},
+                      {field: 'hobby', title: '취미', width: 150, titleAlign: 'center',columnAlign:'center',titleCellClassName:'title-cell-class-name-test',isResize:true},
+                      {field: 'address', title: '주소', width: 280, titleAlign: 'center',columnAlign:'left',isResize:true}
                    ]
 
             }
@@ -60,20 +59,20 @@
 
             columnCellClass(rowIndex,columnName,rowData){
 
-                // 给三行column为‘hobby’的列设置className
+                // 1번 행의 hobby 컬럼에 대한 새로운 className을 설정합니다. 
                 if (rowIndex === 1 && columnName==='hobby'){
 
                     return 'column-cell-class-name-test';
                 }
 
-                // 给第二行设置className
+                // 1번 행 전체에 대해서 새로운 className을 설정합니다. 
                 if (rowIndex ===1){
 
                     return 'column-cell-class-name-test2';
                 }
 
-                // 给姓名为‘周伟’的行设置className
-                if (rowData.name === '周伟'){
+                // name 컬럼의 값이 `조커` 인경우에 className을 설정합니다. 
+                if (rowData.name === '조커'){
 
                     return 'column-cell-class-name-test';
                 }

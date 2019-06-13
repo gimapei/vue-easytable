@@ -1,10 +1,10 @@
 <template>
     <div class="catalog-container" v-if="catalogData && catalogData.length > 0">
         <div class="catalog-corner" v-show="!showCatalogList2" @click.stop="toggleCatalogList()">
-            <span>目录</span>
+            <span>목록</span>
         </div>
         <ul class="catalog-ul" v-show="showCatalogList2">
-            <li class="catalog-li-title" @click.stop="toggleCatalogList()">目 录 <i
+            <li class="catalog-li-title" @click.stop="toggleCatalogList()">목록 <i
                     class="catalog-li-title-down icon iconfont icon-shouqi1"></i></li>
             <li :title="item.label" class="catalog-li" v-for="item in catalogData"><a @click.stop="goAnchor(item.id)"
                                                                                       href="javascript:void(0);">{{item.label}}</a>

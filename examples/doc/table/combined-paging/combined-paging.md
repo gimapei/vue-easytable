@@ -1,4 +1,4 @@
-:::demo 结合分页组件的table实例
+:::demo 테이블과 페이징 컴포넌트 연결
 ```html
 <template>
   <div>
@@ -65,18 +65,18 @@
 
                     ],
                     titleRows: [
-                                 [{fields: ['custome'], title: '排序', titleAlign: 'center', rowspan: 2},
-                                  {fields: ['name', 'height'], title: '基础信息', titleAlign: 'center', colspan: 2},
-                                  {fields: ['gender','address','hobby'], title: '用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;他&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;息', titleAlign: 'center', colspan: 3}],
+                                 [{fields: ['custome'], title: '정렬', titleAlign: 'center', rowspan: 2},
+                                  {fields: ['name', 'height'], title: '기본정보', titleAlign: 'center', colspan: 2},
+                                  {fields: ['gender','address','hobby'], title: '사용자 및 기타정보', titleAlign: 'center', colspan: 3}],
 
-                                 [{fields: ['name'], title: '姓名', titleAlign: 'center'},
-                                  {fields: ['height'], title: '身高', titleAlign: 'center', orderBy: ''},
-                                  {fields: ['gender'], title: '性别', titleAlign: 'center'},
-                                  {fields: ['address'], title: '住址', titleAlign: 'center'},
-                                  {fields: ['hobby'], title: '爱好', titleAlign: 'center'}
+                                 [{fields: ['name'], title: '이름', titleAlign: 'center'},
+                                  {fields: ['height'], title: '높이', titleAlign: 'center', orderBy: ''},
+                                  {fields: ['gender'], title: '성별', titleAlign: 'center'},
+                                  {fields: ['address'], title: '주소', titleAlign: 'center'},
+                                  {fields: ['hobby'], title: '취미', titleAlign: 'center'}
                                   ],
 
-                                 [{fields: ['custome','name','height'], title: '平均值', titleAlign: 'center', colspan: 3,titleCellClassName:'title-cell-class-name-test1'},
+                                 [{fields: ['custome','name','height'], title: '평균', titleAlign: 'center', colspan: 3,titleCellClassName:'title-cell-class-name-test1'},
                                    {fields: ['gender'], title: '111', titleAlign: 'center',titleCellClassName:'title-cell-class-name-test2'},
                                    {fields: ['address'], title: '222', titleAlign: 'center',titleCellClassName:'title-cell-class-name-test2'},
                                   {fields: ['hobby'], title: '333', titleAlign: 'center',titleCellClassName:'title-cell-class-name-test2'},

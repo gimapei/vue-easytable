@@ -18,12 +18,12 @@ Vue.component('demo-box', demoBox);
 Vue.component('anchor', anchor);
 
 // product
-import '../libs/themes-base/index.css'
- import {VTable,VPagination,VCheckbox,VCheckboxGroup,VSelect,VDropdown} from '../libs/index.js'
+// import '../libs/themes-base/index.css'
+// import {VTable,VPagination,VCheckbox,VCheckboxGroup,VSelect,VDropdown} from '../libs/index.js'
 
 // dev
-/*import '../packages/themes-base/index.css'
-import {VTable,VPagination,VCheckbox,VCheckboxGroup,VSelect,VDropdown} from '../packages/index.js'*/
+import '../packages/themes-base/index.css'
+import {VTable,VPagination,VCheckbox,VCheckboxGroup,VSelect,VDropdown} from '../packages/index.js'
 
 Vue.component(VTable.name, VTable)
 Vue.component(VPagination.name, VPagination)
@@ -44,7 +44,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach(() => {
-    NProgress.done(); // 结束Progress
+    NProgress.done(); 
 });
 
 new Vue({

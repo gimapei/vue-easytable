@@ -1,51 +1,50 @@
 
 ### Table props
-| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+| 매개변수      | 설명          | 데이타타입      | 선택 값                           | 기본값  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| width | table 宽度 | number | — | — |
-| min-width | table 最小宽度（当设置了横向自适应时生效） | number |  —  |  —  |
-| height | table 高度 | number | — | — |
-| min-height | table最小高度（当设置了纵向自适应时生效） | number | — | — |
-| title-row-height | 表头行高 | number | — | 38px |
-| row-height | 表格体行高 | string | — | 40px |
-| footer-row-height | footer 每一行的高度 | number | — | 40 |
-| is-horizontal-resize | 是否开启横向自适应（开启后会随着窗口改变而改变、根据表格宽度自动填充），注意需要设置`style="width:100%"` | boolean | — | false |
-| is-vertical-resize | 是否开启纵向自适应（开启后会随着窗口改变而改变、根据表格高度自动填充）| boolean | — | false |
-| vertical-resize-offset | 垂直自适应的偏移量，一般是表格下方有分页时会用到，使其成为自适应的一部分 | number | — | - |
-| table-bg-color | 表格背景颜色 | string | — | #fff |
-| title-bg-color | 表头背景颜色 | string | — | #fff |
-| odd-bg-color | 表格体奇数行颜色 | string | — |  |
-| even-bg-color |表格体偶数行颜色 | string | — |  |
-| multiple-sort | 是否开启多列排序| boolean | — | true |
-| sort-always | 是否只在升序和倒序切换| boolean | — | false |
-| table-data | 表格数据集合 | - | — | array |
-| columns | 列的集合。具体参考columns | array | — | — |
-| title-rows | 复杂表头集合，只有复杂表头时用到。具体参考titleRows | array | — | — |
-| paging-index | 当前分页序号，结合分页需要显示在表格内时（一般是分页的行号） | number | — | — |
-| error-content | 表体没数据时显示的内容 | html/string | — | ’暂无数据‘ |
-| error-content-height | 表体没数据时区域高度 | number | — | 50px |
-| is-loading |  是否正在加载,异步请求结束要显示的设置false | boolean | — | false |
-| loading-content | 加载时的内容 | html/string | — | loading 菊花效果 |
-| loading-opacity | 加载时透明度 | number | 0~1 | 0.6 |
-| row-hover-color | 表格体行浮动背景色 | string | — | - |
-| row-click-color | 表格体行点击后的背景色（行高亮） | string | — | — |
-| show-vertical-border | 是否显示垂直border,false 时列拖动失效 | boolean | — | true |
-| show-horizontal-border | 是否显示横向border | boolean | — | true |
-| column-width-drag | 是否开启列宽拖动 | boolean | — | false |
-| row-click | 行单击回调 | Function({rowIndex, rowData, column}) | — | — |
-| row-dblclick | 行双击回调 | Function({rowIndex, rowData, column}) | — | — |
-| title-click | 表头单元格单击回调 | Function({title,field}) | — | — |
-| title-dblclick | 表头单元格双击回调 | Function({title,field}) | — | — |
-| row-mouse-enter|  鼠标进入表体行的回调| Function({rowIndex}) | — | — |
-| row-mouse-leave|  鼠标离开表体行的回调|  Function({rowIndex}) | — | — |
-| filter-method|  数据筛选的回调|  Function({filters}) | — | — |
-| ~~cell-edit-formatter~~ [1.3.5](https://github.com/huangshuwei/vue-easytable/releases/tag/1.3.5) 版本废除|  ~~单元格编辑格式化回调（可以对编辑的结果设置样式等）~~|  ~~Function({newValue,oldValue,rowIndex,rowData,field})~~| — | — |
-| cell-edit-done|  单元格编辑完成回调|  Function({newValue,oldValue,rowIndex,rowData,field})| — | — |
-| cell-merge|  单元格合并，支持rowSpan、colSpan,返回值`{colSpan: 1,rowSpan: 1,content: '',componentName: ''}`；合并后单元格的内容可以通过`content`（html）设置也可以通过,`componentName`（自定义组件）设置| Function({rowIndex,rowData,field})| — | — |
-| select-all| 全选时触发 | Function({selection}) 参数说明: selection 当前选中的项集合 | — | — |
-| select-change| 某一项 checkbox 触发 | Function({selection,rowData}) 参数说明：selection为当前选中的项集合，rowData为当前选中的项| — | — |
-| select-group-change| 选中项发生变化触发 |Function({selection}) 参数说明:  selection为当前选中的项集合  | — | — |
-| column-cell-class-name| 表体单元格设置className | Function({rowIndex,columnName,rowData})  | — | — |
+| width | table 넓이 | number | — | — |
+| min-width | table 최소넓이（넓이 자동조정이 설정된 경우만） | number |  —  |  —  |
+| height | table 높이 | number | — | — |
+| min-height | table 최소높이 （높이 자동조정이 설정된 경우만） | number | — | — |
+| title-row-height | 테이블 해더 높이 | number | — | 38px |
+| row-height | 열 높이 | string | — | 40px |
+| footer-row-height | footer 열 높이 | number | — | 40 |
+| is-horizontal-resize | 수평 적용을 가능하게 할 것인지 (창을 변경 한 후 테이블의 너비에 따라 자동으로 채우기), `setstyle="width:100%"`의 필요성에주의하십시오. | boolean | — | false |
+| is-vertical-resize | 수직 적응을 활성화할지 여부 (켜기로 변경하면 창이 변경되고 테이블의 높이에 따라 자동으로 채워짐) | boolean | — | false |
+| vertical-resize-offset | 수직 적응 옵셋은 테이블 아래에 페이지가있을 때 일반적으로 사용되어 적응의 일부가됩니다. | number | — | - |
+| table-bg-color | 테이블 배경색  | string | — | #fff |
+| title-bg-color | 테이블 해더 배경색 | string | — | #fff |
+| odd-bg-color | 홀수줄 배경색  | string | — |  |
+| even-bg-color | 짝수줄 배경색 | string | — |  |
+| multiple-sort | 복합 정렬 | boolean | — | true |
+| sort-always | 항상 정렬 | boolean | — | false |
+| table-data | 테이블 데이타  | - | — | array |
+| columns | 컬럼들  | array | — | — |
+| title-rows | 해더 줄들  | array | — | — |
+| paging-index | 페이징 인덱스  | number | — | — |
+| error-content | 데이터가 없을때 표시되는 내용 | html/string | — | ’暂无数据‘ |
+| error-content-height | 데이터가 억을때 표시되는 영역의 높이 | number | — | 50px |
+| is-loading |  로드 중일 때 비동기 요청은 표시 할 설정을 종료합니다. | boolean | — | false |
+| loading-content | 로딩시 컨텐츠 | html/string | — | loading 菊花效果 |
+| loading-opacity | 로딩시 투명도 | number | 0~1 | 0.6 |
+| row-hover-color | 행에 마우스 올라갈경우 색상 | string | — | - |
+| row-click-color | 행 선택시 색상 | string | — | — |
+| show-vertical-border | 세로 테두리 보이기  | boolean | — | true |
+| show-horizontal-border | 가로 테두리 보이기 | boolean | — | true |
+| column-width-drag | 컬럼 드래그 크기 조정여부 | boolean | — | false |
+| row-click | 행 클릭이벤트 | Function({rowIndex, rowData, column}) | — | — |
+| row-dblclick | 행 더블클릭 이벤트 | Function({rowIndex, rowData, column}) | — | — |
+| title-click | 해더 클릭 이벤트 | Function({title,field}) | — | — |
+| title-dblclick | 해더 더블클릭 이벤트 | Function({title,field}) | — | — |
+| row-mouse-enter|  행 마우스 진입 이벤트 | Function({rowIndex}) | — | — |
+| row-mouse-leave|  행 마우스 이탈 이벤트 |  Function({rowIndex}) | — | — |
+| filter-method|  필터 함수 |  Function({filters}) | — | — |
+| cell-edit-done|  셀 편집완료 이벤트 |  Function({newValue,oldValue,rowIndex,rowData,field})| — | — |
+| cell-merge|  셀 병합, rowSpan, colSpan, 반환 값 지원 `{colSpan: 1,rowSpan: 1,content: '',componentName: ''}`, 병합 된 셀의 내용은 content(html) 또는 `componentName`(custom 구성 요소) 설정을 통해 설정할 수 있습니다.| Function({rowIndex,rowData,field})| — | — |
+| select-all| 전체선택 이벤트 | Function({selection}) 매개변수 설명: selection 현재 선택된 항목 컬렉션 | — | — |
+| select-change| 선택변경 이벤트 | Function({selection,rowData}) 매개변수 설명：selection현재 선택된 항목세트，rowData현재선택된 항목| — | — |
+| select-group-change| 그룹선택 변경 |Function({selection}) 매개변수 설명:  selection현재 선택된 항목 컬렉션  | — | — |
+| column-cell-class-name| 컬럼 셀 스타일명 | Function({rowIndex,columnName,rowData})  | — | — |
 
 
 

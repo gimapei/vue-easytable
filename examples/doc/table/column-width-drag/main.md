@@ -2,10 +2,10 @@
 ```html
 <template>
          <div class="mt30">
-            <h3>列宽拖动</h3>
+            <h3>열 넓이 드래그</h3>
 
             <div class="mt30">
-               <anchor id="column-width-drag" label="列宽拖动" h4 ></anchor>
+               <anchor id="column-width-drag" label="열 넓이 드래그" h4 ></anchor>
                <column-width-drag></column-width-drag>
            </div>
         </div>
